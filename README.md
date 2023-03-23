@@ -1,2 +1,2 @@
 ﻿# JS_practice
-# https://www.udemy.com/course/javascript_full
+# https://www.udemy.com/course/javascript_full/learn/lecture
