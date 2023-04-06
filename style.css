@@ -1,4 +1,4 @@
-.box {
+/* .box {
   position: absolute;
   width: 100px;
   height: 100px;
@@ -17,7 +17,7 @@ button {
   height: 40px;
   background-color: yellow;
   border: none;
-}
+} */
 
 /* #ball {
   position: absolute;
@@ -42,3 +42,39 @@ button {
     top: calc(100% - 50px);
   }
 } */
+
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 300px;
+    height: 250px;
+    margin: 40px auto;
+    padding: 50px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 20px;
+} */
+
+/* КАК СОХРАНИТЬ ДАННЫЕ БЕЗ БД. РАБОТА С localStorage */
+
+* {
+  box-sizing: border-box;
+}
+.wrapper {
+  width: 400px;
+  margin: 40px auto 0 auto;
+  border: 1px solid rgba(0,0,0, .2);
+  padding: 20px;
+}
+
+button {
+  margin-top: 20px;
+}
+
+[type=checkbox] {
+  margin-top: 20px;
+}

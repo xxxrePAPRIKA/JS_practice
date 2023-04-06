@@ -219,41 +219,266 @@ alert(`Цикл for отработал за ${end - start} милисекунд`
 // });
 
 
-class Rectangle {
-    constructor(height, width) {
-        this.height = height;
-        this.width = width;
-    }
+// class Rectangle {
+//     constructor(height, width) {
+//         this.height = height;
+//         this.width = width;
+//     }
 
-    calcArea() {
-        return this.height * this.width;
-    }
-};
+//     calcArea() {
+//         return this.height * this.width;
+//     }
+// };
 
-class ColoredRectangleWithText extends Rectangle {
-    constructor(height, width, text, bgColor) {
-        super(height, width);
-        this.text = text;
-        this.bgColor = bgColor;
-    }
+// class ColoredRectangleWithText extends Rectangle {
+//     constructor(height, width, text, bgColor) {
+//         super(height, width);
+//         this.text = text;
+//         this.bgColor = bgColor;
+//     }
 
-    showMyProps() {
-        console.log(`текс: ${this.text}, цвет: ${this.bgColor}`);
-    }
-}
-
-
-const div = new ColoredRectangleWithText(25, 10, 'Helloworld', 'red')
-div.showMyProps();
-console.log(div.calcArea());
+//     showMyProps() {
+//         console.log(`текс: ${this.text}, цвет: ${this.bgColor}`);
+//     }
+// }
 
 
+// const div = new ColoredRectangleWithText(25, 10, 'Helloworld', 'red')
+// div.showMyProps();
+// console.log(div.calcArea());
 
 
-const square = new Rectangle(10, 10);
-const long = new Rectangle(20, 100);
 
-console.log(square.calcArea());
-console.log(square);
-console.log(long.calcArea());
-console.log(long);
+
+// const square = new Rectangle(10, 10);
+// const long = new Rectangle(20, 100);
+
+// console.log(square.calcArea());
+// console.log(square);
+// console.log(long.calcArea());
+// console.log(long);
+
+
+// 'use strict';
+
+// const box = document.querySelector('.box');
+
+// let observer = new MutationObserver(mutationRecords => {
+//     console.log(mutationRecords);
+// });
+
+// observer.observe(box, {
+//     childList: true
+// });
+
+// function User(name, id) {
+//     this.name = name;
+//     this.id = id;
+//     this.human = true;
+//     this.hello = function () {
+//         console.log(`hello ${this.name}`); 
+//     }
+// }
+
+// const ivan = new User('Ivan', 28);
+// const alex = new User('Alex', 20)
+
+// ivan.hello();
+// alex.hello();
+
+// User.prototype.exit = function() {
+//     console.log(`User ${this.name} leave`);
+// };
+
+// ivan.exit();
+
+
+///////////////////////////////////////////////////////////////////////////
+
+// function showThis(a, b) {
+//     console.log(this);
+//     function sum() {
+//     console.log(this);
+//         return a + b
+//     }
+
+//     console.log(sum());
+// };
+
+// showThis(4, 5);
+
+// const obj = {
+//     a: 20,
+//     b: 15,
+//     sum: function() {
+//         console.log(this);
+//     }
+// }
+
+// obj.sum()
+
+// function sayName() {
+//     console.log(this);
+//     console.log(this.name);
+// };
+
+// const user = {
+//     name: 'John'
+// };
+
+// sayName.call(user);
+// sayName.apply(user);
+
+// function count(num) {
+//     return this*num;
+// };
+
+// const double = count.bind(2);
+// console.log(double(3));
+
+// const btn = document.querySelector('button');
+
+// btn.addEventListener('click', function() {
+//     console.log(this);
+// });
+
+
+// class Rectangle {
+//     constructor(height, width) {
+//         this.height = height;
+//         this.width = width;
+//     }
+
+//     calcArea() {
+//         return this.height * this.width;
+//     }
+// };
+
+// class ColoredRectangleWithText extends Rectangle {
+//     constructor(height, width, text, bgColor) {
+//         super(height, width);
+//         this.text = text;
+//         this.bgColor = bgColor;
+//     }
+
+//     showMyProps() {
+//         console.log(`текс: ${this.text}, цвет: ${this.bgColor}`);
+//     }
+// }
+
+
+// const div = new ColoredRectangleWithText(25, 10, 'Helloworld', 'red')
+// div.showMyProps();
+// console.log(div.calcArea());
+
+
+
+
+// const square = new Rectangle(10, 10);
+// const long = new Rectangle(20, 100);
+
+// console.log(square.calcArea());
+// console.log(square);
+// console.log(long.calcArea());
+// console.log(long);
+
+
+
+
+// ///////////////////// 
+'use strict'
+
+// const persone = {
+//     name: 'alex',
+//     tel: '+7888899999'
+// }
+
+// console.log(JSON.parse(JSON.stringify(persone)));
+
+////////////////////// PROMISE
+
+// console.log('Запрос данных....');
+
+// const req = new Promise(function(resolve, reject){
+//     setTimeout(()=>{
+//         console.log('Подготовка данных.............');
+    
+//         const product = {
+//             name: 'TV',
+//             price: 2000
+//         };
+    
+//         resolve(product);
+//     }, 2000);
+// });
+
+// req.then((product) => {
+//     const req2 = new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             product.status = 'order';
+//             resolve(product); 
+//         }, 2000)
+//     });
+
+//     req2.then(data => {
+//         console.log(data);
+//     });
+
+    
+// });
+
+
+
+/////////////////////////////////////////   МЕТОДЫ ПЕРЕБОРА МАССИВОВ
+
+
+// filter
+
+// const names = ['ivan', 'ann', 'ksenia', 'voldemart'];
+
+// const shortNames = names.filter(function(name) {
+//     return name.length < 5
+// });
+
+// console.log(shortNames);
+
+// 'use strict';
+
+// const answers = ['IvAn', 'ANnA', 'HEllo'];
+
+// const result = answers.map(item => item.toLowerCase());
+
+// console.log(result);
+
+// every/some
+
+// const some = [4, 5, 6n];
+
+// console.log(some.some(item => typeof(item) === 'number'));
+
+// console.log(some.every(item => typeof(item) === 'number'));
+
+//////////////////// REDUSE
+
+// const arr = [4, 5, 1, 3, 2, 6];
+// const res = arr.reduce((sum, current) => sum + current);
+
+// const obj = {
+//     ivan: 'persone',
+//     ann: 'persone',
+//     dog: 'animal',
+//     cat: 'animal'
+// };
+
+// const newArr = Object.entries(obj)
+//     .filter(item => item[1] === 'persone')
+//     .map(item => item[0])
+
+// console.log(newArr);
+
+/////////////////////// КАК СОХРАНИТЬ ДАННЫЕ БЕЗ БД. РАБОТА С localStorage
+
+
+'use sctrict';
+
+window.localStorage
